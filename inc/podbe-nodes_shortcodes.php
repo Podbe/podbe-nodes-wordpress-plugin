@@ -61,20 +61,20 @@ function podbe_node_url_shortcode( $atts ) {
   		shortcode_atts( 
   			array(
   				'url' => '', 					//$suche['post']['url'];
-  				'title' => '', 					//$suche['post']['title'];
-  				'cover' => '', 					//$suche['post']['podcast'][0]['podcast_cover'];
+  				'page' => '', 					//$suche['post']['title'];
+  				'title' => '', 					//$suche['post']['podcast'][0]['podcast_cover'];
   			), 
   		$atts ) 
   	);
     
   	if(esc_attr($url) == '1'){
-  		$pn_url_out = $suche['post']['url'];
+  		$pn_url_out = $suche["podbe"]['url'];
   	} 
-	if(esc_attr($title) == '1'){
-  		$pn_title_out = $suche['post']['title'];
+	if(esc_attr($page) == '1'){
+  		$pn_title_out = $suche["podbe"]['page'];
   	}
-  	if(esc_attr($cover) == '1'){
-  		$pn_cover_out = $suche['post']['podcast'][0]['cover'];
+  	if(esc_attr($title) == '1'){
+  		$pn_title_out = $suche["podcast"]["title"];
   	}
   	/*
   	weitere folgen
